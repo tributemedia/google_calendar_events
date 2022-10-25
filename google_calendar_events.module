@@ -1,0 +1,40 @@
+<?php
+
+use Drupal\google_calendar_events\Plugin\QueueWorker\CalendarCheckWorker;
+
+/**
+ * Implements hook_cron()
+ */
+function google_calendar_events_cron() {
+
+  \Drupal::logger('google_calendar_events')
+        ->notice('Cron job running.');
+
+  $nextRun = \Drupal::state()->get('google_calendar_events.next_exec');
+
+  if(empty($nextRun)) {
+
+    CalendarCheckWorker::setNextExecTime();
+
+  }
+  else {
+
+    // This block queues a job for the review checking worker at the
+    // interval defined above.
+    if(time() >= $nextRun) {
+
+      $queueFactory = \Drupal::service('queue');
+      $ccq = $queueFactory->get('google_calendar_events_ccq');
+      $ccq->createItem(new \stdClass());
+      \Drupal::logger('google_calendar_events')
+        ->notice('Calendar check queued.');
+
+      CalendarCheckWorker::setNextExecTime();
+
+    }
+
+  }
+
+  \Drupal::logger('google_calendar_events')
+        ->notice('Cron job finished.');
+}

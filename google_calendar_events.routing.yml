@@ -1,0 +1,14 @@
+google_calendar_events.config_form:
+  path: 'admin/config/services/gce/config'
+  defaults:
+    _form: '\Drupal\google_calendar_events\Form\GCEConfigForm'
+    _title: 'Google Calendar Events Config'
+  requirements:
+    _permission: 'administer_nodes'
+google_calendar_events.status_form:
+  path: 'admin/config/services/gce/status'
+  defaults:
+    _form: '\Drupal\google_calendar_events\Form\GCEStatusForm'
+    _title: 'Google Calendar Events Status'
+  requirements:
+    _permission: 'administer_nodes'

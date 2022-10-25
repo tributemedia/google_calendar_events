@@ -1,0 +1,11 @@
+name: 'Google Calendar Events'
+type: module
+description: 'Creates Event nodes from a configured Google Calendar.'
+package: Web services
+version: '1.0.0'
+core_version_requirement: '9.x'
+dependencies:
+  - fullcalendar_view
+  - key
+  - smart_date
+  - smart_date_recur

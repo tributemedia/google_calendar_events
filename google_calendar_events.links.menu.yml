@@ -1,0 +1,12 @@
+google_calendar_events.admin.structure.gce_settings:
+  title: 'Google Calendar Events Settings'
+  description: 'Configure Google Calendar Events Module'
+  route_name:  google_calendar_events.config_form
+  parent: system.admin_config_services
+  weight: 200
+google_calendar_events.admin.structure.gce_config:
+  title: 'Google Calendar Events Status'
+  description: 'View queues and kick off event check'
+  route_name:  google_calendar_events.status_form
+  parent: system.admin_config_services
+  weight: 201

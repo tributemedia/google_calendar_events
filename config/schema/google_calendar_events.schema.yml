@@ -1,0 +1,19 @@
+google_calendar_events.settings:
+  type: config_object
+  label: 'Config settings for Google Calendar Events'
+  mapping:
+    calendar:
+      type: string
+      label: 'Calendar ID to Sync With'
+    sync_range:
+      type: string
+      label: 'The date range to sync events'
+    subject:
+      type: string
+      label: 'The API subject used for the service key'
+    google_events:
+      type: sequence
+      label: 'Array of Google Calendar IDs for events to sync'
+      sequence:
+        type: string
+        

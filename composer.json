@@ -1,0 +1,14 @@
+{
+    "name": "tributemedia/google_calendar_events",
+    "description": "Creates Event nodes from a configured Google Calendar.",
+    "type": "drupal-module",
+    "license": "GPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "Tributemedia\\GoogleCalendarEvents\\": "src/"
+        }
+    },
+    "require": {
+        "google/apiclient": "~2.12"
+    }
+}

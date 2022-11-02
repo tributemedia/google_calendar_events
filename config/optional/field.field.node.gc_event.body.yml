@@ -3,13 +3,13 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.mdc_event
+    - node.type.gc_event
   module:
     - text
-id: node.mdc_event.body
+id: node.gc_event.body
 field_name: body
 entity_type: node
-bundle: mdc_event
+bundle: gc_event
 label: Body
 description: ''
 required: false

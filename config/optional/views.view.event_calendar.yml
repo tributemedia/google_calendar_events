@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_event_date
-    - node.type.mdc_event
+    - node.type.gc_event
   module:
     - fullcalendar_view
     - node
@@ -205,7 +205,7 @@ display:
           entity_field: type
           plugin_id: bundle
           value:
-            mdc_event: mdc_event
+            gc_event: gc_event
           expose:
             operator_limit_selection: false
             operator_list: {  }
@@ -237,7 +237,7 @@ display:
           color_bundle:
             article: '#3a87ad'
             document_upload: '#3a87ad'
-            mdc_event: '#3a87ad'
+            gc_event: '#3a87ad'
             page: '#3a87ad'
             pillar_navigation: '#3a87ad'
             webform: '#3a87ad'

@@ -32,7 +32,7 @@ class CalendarEventWorker extends QueueWorkerBase {
       $endDate = new \DateTime($item->end);
 
       $newNode = Node::create([
-        'type' => 'mdc_event',
+        'type' => 'gc_event',
         'title' => $item->title,
         'body' => [
           'summary' => '',

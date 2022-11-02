@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_event_date
-    - node.type.mdc_event
+    - node.type.gc_event
   module:
     - smart_date
     - smart_date_recur
@@ -11,10 +11,10 @@ third_party_settings:
   smart_date_recur:
     allow_recurring: true
     month_limit: 12
-id: node.mdc_event.field_event_date
+id: node.gc_event.field_event_date
 field_name: field_event_date
 entity_type: node
-bundle: mdc_event
+bundle: gc_event
 label: Date
 description: 'The date, or dates of the event, if it''s a recurring event.'
 required: true
